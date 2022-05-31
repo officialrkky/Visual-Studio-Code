@@ -1,0 +1,156 @@
+/*Grid Layout*/
+body{
+    display: grid;
+    grid-template-rows: 50px 100vh 100vh 50px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+                         "page1"
+                         "page2"
+                         "footer";
+
+}
+.header{
+    grid-area: header;
+}
+
+.page1{
+    grid-area:page1;
+}
+
+.page2{
+    grid-area: page2;
+    position: absolute;
+    top: 110vh;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+/*Page 1 Layout Edits*/
+
+body{
+    background-color: var(--beige-weak);
+}
+
+.page1 h1{
+    position: absolute;
+    z-index: 1;
+    top:18%;
+    left: 45%;
+    color: var(--black);
+    text-shadow: -1px -1px 0 var(--beige-weak), 1px -1px 0  var(--beige-weak), -1px 1px 0  var(--beige-weak), 1px 1px 0  var(--beige-weak);
+
+}
+
+#slider{
+    overflow-x: hidden;
+
+}
+
+#slider figure{
+    position: relative;
+    width: 900%;
+    margin: 0;
+    left:0;
+    animation: 30s slider infinite;
+}
+
+#slider figure img{
+    height: 100vh;
+    width: 11.11%;
+    float:left;
+}
+
+@keyframes slider{
+    0% {
+        left: 0;
+    }
+
+    11.11%{
+        left: -100%;
+    }
+
+    22.22%{
+        left: -200%;
+    }
+
+    33.33%{
+        left: -300%;
+    }
+
+    44.44%{
+        left: -400%;
+    }
+
+    55.55%{
+        left: -500%;
+        }
+
+    66.66%{
+        left: -600%;
+        }
+
+    77.77%{
+        left: -700%;
+        }
+
+    88.88%{
+        left: -800%;
+    }
+
+    99.99%{
+        left: 0%
+    }
+
+} 
+
+
+/*Page 2 Layout Edits*/
+.page2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page2 h2{
+    text-align: center;
+}
+
+.sectionRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 700px;
+}
+.section img{
+    height: 300px;
+    width:  570px;
+    transform:scale(1);
+    box-shadow: 0px 2px 5px var(--beige-strong);
+}
+
+.section img:hover{
+    transition: 0.5s ease-in-out;
+    transform:scale(1.1);
+    box-shadow: 0px 10px 15px var(--beige-strong);
+}
+
+.section h2, .section p{
+    padding: 10px;
+}
+
+
